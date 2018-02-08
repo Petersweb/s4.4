@@ -23,5 +23,12 @@ int main()
       lcd.locate(0, 0);
       lcd.printf("ACC: X=%+1.3f Y=%+1.3f Z=%+1.3f \t",
                 acc_data.x, acc_data.y, acc_data.z);
+      lcd.locate(0,20);
+      if (acc_data.y>0){
+        lcd.printf("Up  ");
+        }
+        else{
+          lcd.printf("Down");
+        }
     }
 }
